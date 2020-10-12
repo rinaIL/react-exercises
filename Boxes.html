@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='style.css'>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>                                             
+    <div id ="app" ></div>
+
+<script type="text/babel">
+
+    class Box4  extends React.Component
+    {
+        render() {
+            return (
+                <div className ="box4"> </div>
+            );
+        }
+    }
+
+    class Box3  extends React.Component
+    {
+        render() {
+            return (
+                <div className ="box3"> 
+                    <Box4/>
+                    <br/>
+                    <Box4/>
+                </div>
+            );
+        }
+    }
+
+    class Box2 extends React.Component
+    {
+        render() {
+            return (
+                <div className ="box2">
+                    <Box3/>
+                 </div>
+            );
+        }
+    }
+   
+    class Box1 extends React.Component 
+    {
+        render() {
+            return ( 
+                <div className ="box1">
+                    <Box2/>
+                 </div>            
+                );
+        }
+
+
+    }
+
+      ReactDOM.render(<div><Box1/></div>, document.getElementById('app'));
+</script>                                                                                                                         
+</body>
+</html>                                                                      
