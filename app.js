@@ -14,7 +14,8 @@ const linkStyle = {
         render() {
             return (
                 <div className ="box4"> 
-                    <a style = {linkStyle} href="#">{text}</a>
+                    <a style = {linkStyle} href="#">{this.props.children}</a>
+                    
                 </div>
             );
         }
@@ -28,9 +29,11 @@ const linkStyle = {
         render() {
             return (
                 <div className ="box3"> 
-                    <Box4 type="box3"/>
+                    <Box4 type="box3">
+                        Sapir
+                    </Box4>
                     <br/>
-                    <Box4 type="box3"/>
+                    <Box4 type="box3">{text}</Box4>
                 </div>
             );
         }
@@ -44,7 +47,7 @@ const linkStyle = {
         render() {
             return (
                 <div className ={this.props.type}>
-                    <Box3 type="box3"/>
+                    <Box3 type="box3"></Box3>
                  </div>
             );
         }

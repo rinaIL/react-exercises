@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My first react app</title>
+    <style>
+        * { font-size: 24px; }
+        body { font-family: Arial, Helvetica, sans-serif; }
+        #app { text-align: center; }
+        .counter-component > div { margin: 1em 0; }
+        button {
+            padding: 0.2em 0.7em;
+            box-shadow: 0 0 3px rgba(0,0,0,0.4);
+        }
+        button:active {
+            position: relative;
+            box-shadow: -1px -2px 3px #AAA;
+            left: 1px;
+            top: 2px;
+        }
+        .toggle-box {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin: 1em auto;
+        }
+        .hide-box {
+            padding: 20px;
+            display: inline-block;
+            border: 1px solid;
+        }
+        .hide {
+            visibility: hidden;
+        }
+    </style>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel" src="hide.jsx"></script>
+</body>
+
+</html>
